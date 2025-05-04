@@ -23,7 +23,6 @@ function mooText() {
     let textArea = document.getElementById("userText");
     let text = textArea.value.toUpperCase();
 
-    // Split text into sentences (by period)
     let sentences = text.split(".");
     for (let i = 0; i < sentences.length; i++) {
         let sentence = sentences[i].trim();
@@ -35,6 +34,5 @@ function mooText() {
         }
     }
 
-    // Join the sentences back together with proper punctuation
     textArea.value = sentences.join(". ") + (text.endsWith(".") ? "." : "");
 }
